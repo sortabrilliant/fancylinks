@@ -1,0 +1,37 @@
+{
+	"name": "sorta-brilliant-fancylinks",
+	"version": "1.0.0",
+	"description": "",
+	"author": "sorta brilliant",
+	"license": "GPL-2.0-or-later",
+	"keywords": [
+		"wordpress"
+	],
+	"homepage": "https://sortabrilliant.com",
+	"main": "src/index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sortabrilliant/fancylinks.git"
+	},
+	"scripts": {
+		"build": "wp-scripts build",
+		"lint:css": "wp-scripts lint-style",
+		"lint:scripts": "wp-scripts lint-js",
+		"lint:pkg-json": "wp-scripts lint-pkg-json",
+		"start": "wp-scripts start",
+		"test:unit": "wp-scripts test-unit-js"
+	},
+	"devDependencies": {
+		"@microlink/react": "^5.0.0",
+		"@wordpress/scripts": "^6.2.0",
+		"metascraper": "^5.10.6",
+		"styled-components": "^5.0.0",
+		"metascraper-author": "^5.10.6",
+		"metascraper-date": "^5.10.6",
+		"metascraper-description": "^5.10.6",
+		"metascraper-image": "^5.10.6",
+		"metascraper-publisher": "^5.10.6",
+		"metascraper-title": "^5.10.6",
+		"metascraper-url": "^5.10.6"
+	}
+}

@@ -1,0 +1,57 @@
+.fancylinks-card {
+	background: #fff;
+	display: block;
+	color: inherit;
+	position: relative;
+	text-decoration: none;
+	border: 1px solid #e1e8ed;
+	transition: .2s cubic-bezier(.35,.01,.25,.99);
+	transition-property: background-color, color;
+	will-change: background-color, color;
+}
+
+.fancylinks-card:focus,
+.fancylinks-card:hover {
+	background-color: #e1e8ed;
+	color: #4477ff;
+}
+
+.fancylinks-card__info {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+}
+
+.fancylinks-card .fancylinks-card__info h3 {
+	font-size: 20px;
+	line-height: 1.2;
+	margin: 0;
+}
+
+.fancylinks-card .fancylinks-card__info p {
+	font-size: 18px;
+	margin: 10px 0;
+}
+
+.fancylinks-card__publisher {
+	flex: 0 0 auto;
+	font-size: 13px;
+	padding: 8px 0;
+	white-space: nowrap;
+}
+
+.fancylinks-card__image {
+	height: 100%;
+	left: 0;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.fancylinks-card__media {
+	height: 0;
+	padding-top: 56.25%; /* 16x9 */
+	position: relative;
+	overflow: hidden;
+}
