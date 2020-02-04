@@ -21,7 +21,8 @@ class TinyLinkEdit extends Component {
 		this.handleMergingAttributes = this.handleMergingAttributes.bind( this );
 
 		this.state = {
-			editingURL: true,
+			fetching: false,
+			editingURL: false,
 			url: this.props.attributes.url,
 		};
 
@@ -58,7 +59,7 @@ class TinyLinkEdit extends Component {
 
 		const { url } = this.state;
 		const { setAttributes } = this.props;
-		this.setState( { editingURL: false } );
+		this.setState( { editingURL: false, fetching: true } );
 		setAttributes( { url } );
 	}
 
@@ -67,11 +68,11 @@ class TinyLinkEdit extends Component {
 	}
 
 	render() {
-		const { url, editingURL } = this.state;
+		const { url, fetching, editingURL } = this.state;
 		const { attributes, metadata } = this.props;
 		const { title } = attributes;
 
-		if ( ! metadata && ! editingURL ) {
+		if ( ! metadata && fetching ) {
 			return <Loading />;
 		}
 
