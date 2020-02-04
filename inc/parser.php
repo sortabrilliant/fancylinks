@@ -27,6 +27,7 @@ function parse( $html ) {
 		'image'       => [ 'og:image', 'og:image:url', 'twitter:image' ],
 		'title'       => [ 'og:title', 'twitter:title', 'twitter:text:title' ],
 		'publisher'   => [ 'og:site_name' ],
+		'url'         => [ 'og:url', 'twitter:url' ],
 	];
 
 	$libxml_error = libxml_use_internal_errors( true );
