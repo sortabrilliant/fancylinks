@@ -15,7 +15,7 @@ const { name, category, attributes } = metadata;
 
 registerBlockType( name, {
 	title: 'Fancy Links',
-	description: '',
+	description: 'Make your links sorta fancy.',
 	icon: 'share-alt2',
 	keywords: [ 'embed' ],
 	category,

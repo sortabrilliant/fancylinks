@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Fancy Links
  * Plugin URI:  https://sortabrilliant.com/fancylinks/
- * Description:
+ * Description: Make your links sorta fancy.
  * Author:      sorta brilliant
  * Author URI:  https://sortabrilliant.com/
  * Version:     1.0.0
