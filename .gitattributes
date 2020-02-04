@@ -11,4 +11,4 @@
 /package-lock.json export-ignore
 /package.json export-ignore
 /README.md export-ignore
-/webpack.config.js
+/webpack.config.js export-ignore
