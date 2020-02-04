@@ -1,7 +1,7 @@
 const path = require( 'path' );
 const defaultConfig = require( '@wordpress/scripts/config/webpack.config' );
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const OptimizeCssAssetsPlugin = require( 'optimize-css-assets-webpack-plugin' );
 const FixStyleOnlyEntriesPlugin = require( 'webpack-fix-style-only-entries' );
 
 const isProduction = process.env.NODE_ENV === 'production';
@@ -12,8 +12,8 @@ module.exports = {
 	entry: {
 		...defaultConfig.entry,
 
-		'editor': path.resolve( process.cwd(), 'src', 'editor.scss' ),
-		'style': path.resolve( process.cwd(), 'src', 'style.scss' ),
+		editor: path.resolve( process.cwd(), 'src', 'editor.scss' ),
+		style: path.resolve( process.cwd(), 'src', 'style.scss' ),
 	},
 
 	module: {

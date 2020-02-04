@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import Card from './components/card';
+import Preview from './components/preview';
 import Controls from './components/controls';
 import Loading from './components/loading';
 import Placeholder from './components/placeholder';
@@ -69,7 +69,7 @@ class TinyLinkEdit extends Component {
 
 	render() {
 		const { url, fetching, editingURL } = this.state;
-		const { attributes, metadata } = this.props;
+		const { attributes, metadata, isSelected } = this.props;
 		const { title } = attributes;
 
 		if ( ! metadata && fetching ) {
@@ -92,7 +92,10 @@ class TinyLinkEdit extends Component {
 					showEditButton={ url }
 					switchBackToURLInput={ this.switchBackToURLInput }
 				/>
-				<Card { ...attributes } />
+				<Preview
+					isSelected={ isSelected }
+					data={ attributes }
+				/>
 			</>
 		);
 	}

@@ -30,14 +30,14 @@ function register_block() {
 
 	wp_register_style(
 		'fancylinks-style',
-		plugins_url( 'src/style.css', PLUGIN_FILE ),
+		plugins_url( 'build/style.css', PLUGIN_FILE ),
 		[],
 		$asset_file['version']
 	);
 
 	wp_register_style(
 		'fancylinks-editor-style',
-		plugins_url( 'src/editor.css', PLUGIN_FILE ),
+		plugins_url( 'build/editor.css', PLUGIN_FILE ),
 		[],
 		$asset_file['version']
 	);
