@@ -12,8 +12,9 @@ import Placeholder from './components/placeholder';
 import { Component } from '@wordpress/element';
 import { compose } from '@wordpress/compose';
 import { withSelect } from '@wordpress/data';
+import { prependHTTP } from '@wordpress/url';
 
-class TinyLinkEdit extends Component {
+class FancyLinksEdit extends Component {
 	constructor() {
 		super( ...arguments );
 		this.setMeta = this.setUrl.bind( this );
@@ -60,7 +61,7 @@ class TinyLinkEdit extends Component {
 		const { url } = this.state;
 		const { setAttributes } = this.props;
 		this.setState( { editingURL: false, fetching: true } );
-		setAttributes( { url } );
+		setAttributes( { url: prependHTTP( url ) } );
 	}
 
 	switchBackToURLInput() {
@@ -111,4 +112,4 @@ export default compose( [
 			metadata,
 		};
 	} ),
-] )( TinyLinkEdit );
+] )( FancyLinksEdit );

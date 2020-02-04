@@ -15,7 +15,7 @@ const FancyLinksPlaceholder = ( props ) => {
 		>
 			<form onSubmit={ onSubmit }>
 				<input
-					type="url"
+					type="text"
 					value={ value || '' }
 					className="components-placeholder__input"
 					aria-label="Site URL"
