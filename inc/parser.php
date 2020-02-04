@@ -15,7 +15,13 @@ use function libxml_use_internal_errors;
  * @return array $metadata Site meta data, if exists.
  */
 function parse( $html ) {
-	$metadata = [];
+	$metadata = [
+		'description' => '',
+		'image'       => '',
+		'title'       => '',
+		'publisher'   => '',
+	];
+
 	$rules = [
 		'description' => [ 'og:description', 'description' ],
 		'image'       => [ 'og:image', 'og:image:url', 'twitter:image' ],
