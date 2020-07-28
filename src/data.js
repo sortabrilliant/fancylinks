@@ -51,8 +51,10 @@ registerStore( 'sortabrilliant/fancylinks', {
 	},
 
 	resolvers: {
-		* getMetadata( url ) {
-			const metadata = yield actions.fetchFromAPI( addQueryArgs( '/fancylinks/1.0/proxy', { url } ) );
+		*getMetadata( url ) {
+			const metadata = yield actions.fetchFromAPI(
+				addQueryArgs( '/fancylinks/1.0/proxy', { url } )
+			);
 			yield actions.setMetdata( url, metadata );
 		},
 	},

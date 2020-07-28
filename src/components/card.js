@@ -1,4 +1,3 @@
-
 const FancyLinksCard = ( { title, description, image, publisher, url } ) => {
 	return (
 		<a
@@ -9,13 +8,21 @@ const FancyLinksCard = ( { title, description, image, publisher, url } ) => {
 		>
 			{ image && (
 				<div className="fancylinks-card__media">
-					<img src={ image } alt={ title } className="fancylinks-card__image" />
+					<img
+						src={ image }
+						alt={ title }
+						className="fancylinks-card__image"
+					/>
 				</div>
 			) }
 			<div className="fancylinks-card__info">
 				<h3>{ title }</h3>
 				{ description && <p>{ description }</p> }
-				{ publisher && <span className="fancylinks-card__publisher">{ publisher }</span> }
+				{ publisher && (
+					<span className="fancylinks-card__publisher">
+						{ publisher }
+					</span>
+				) }
 			</div>
 		</a>
 	);

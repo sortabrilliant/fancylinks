@@ -19,7 +19,9 @@ class FancyLinksEdit extends Component {
 		super( ...arguments );
 		this.setMeta = this.setUrl.bind( this );
 		this.switchBackToURLInput = this.switchBackToURLInput.bind( this );
-		this.handleMergingAttributes = this.handleMergingAttributes.bind( this );
+		this.handleMergingAttributes = this.handleMergingAttributes.bind(
+			this
+		);
 
 		this.state = {
 			fetching: false,
@@ -46,7 +48,8 @@ class FancyLinksEdit extends Component {
 			this.props.metadata &&
 			this.props.metadata.title !== prevProps.metadata.title;
 		const switchedMeta = metaChanged || ( hasMeta && ! hadMeta );
-		const switchedURL = this.props.attributes.url !== prevProps.attributes.url;
+		const switchedURL =
+			this.props.attributes.url !== prevProps.attributes.url;
 
 		if ( switchedMeta || switchedURL ) {
 			this.handleMergingAttributes();
@@ -82,7 +85,9 @@ class FancyLinksEdit extends Component {
 				<Placeholder
 					onSubmit={ this.setMeta }
 					value={ url }
-					onChange={ ( event ) => this.setState( { url: event.target.value } ) }
+					onChange={ ( event ) =>
+						this.setState( { url: event.target.value } )
+					}
 				/>
 			);
 		}
@@ -93,10 +98,7 @@ class FancyLinksEdit extends Component {
 					showEditButton={ url }
 					switchBackToURLInput={ this.switchBackToURLInput }
 				/>
-				<Preview
-					isSelected={ isSelected }
-					data={ attributes }
-				/>
+				<Preview isSelected={ isSelected } data={ attributes } />
 			</>
 		);
 	}

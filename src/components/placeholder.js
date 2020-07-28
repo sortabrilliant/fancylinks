@@ -20,7 +20,8 @@ const FancyLinksPlaceholder = ( props ) => {
 					className="components-placeholder__input"
 					aria-label="Site URL"
 					placeholder="Enter URL here…"
-					onChange={ onChange } />
+					onChange={ onChange }
+				/>
 				<Button isPrimary type="submit">
 					{ 'Fancy Up' }
 				</Button>

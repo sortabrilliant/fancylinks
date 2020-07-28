@@ -37,9 +37,12 @@ class FancyLinksPreview extends Component {
 		return (
 			<>
 				<Card { ...data } />
-				{ ! interactive && <div
-					className="fancylinks__interactive-overlay"
-					onMouseUp={ this.hideOverlay } /> }
+				{ ! interactive && (
+					<div
+						className="fancylinks__interactive-overlay"
+						onMouseUp={ this.hideOverlay }
+					/>
+				) }
 			</>
 		);
 		/* eslint-enable jsx-a11y/no-static-element-interactions */

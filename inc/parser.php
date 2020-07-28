@@ -39,7 +39,7 @@ function parse( $html ) {
 
 	$metatags = $document->getElementsByTagName( 'meta' );
 
-	if ( ! $metatags || $metatags->length === 0) {
+	if ( ! $metatags || $metatags->length === 0 ) {
 		return $metadata;
 	}
 
