@@ -2,9 +2,9 @@
 Contributors: sortabrilliant, mamaduka
 Tags: links, block
 Requires at least: 5.0
-Tested up to: 5.4
+Tested up to: 5.5
 Requires PHP: 5.6
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -20,5 +20,6 @@ This plugin is brought to you by [sorta brilliant](https://sortabrilliant.com/) 
 1. Click. Done.
 
 == Changelog ==
+* 1.0.2 Fixes placeholder input width for 5.5.
 * 1.0.1 Fixes placeholder button.
 * 1.0.0 Initial Commit
