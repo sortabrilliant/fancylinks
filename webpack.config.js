@@ -2,7 +2,7 @@ const path = require( 'path' );
 const defaultConfig = require( '@wordpress/scripts/config/webpack.config' );
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
 const OptimizeCssAssetsPlugin = require( 'optimize-css-assets-webpack-plugin' );
-const FixStyleOnlyEntriesPlugin = require( 'webpack-fix-style-only-entries' );
+const IgnoreEmitPlugin = require( 'ignore-emit-webpack-plugin' );
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -39,8 +39,13 @@ module.exports = {
 
 	plugins: [
 		...defaultConfig.plugins,
-		new FixStyleOnlyEntriesPlugin(),
 		new MiniCssExtractPlugin( { filename: '[name].css' } ),
 		new OptimizeCssAssetsPlugin(),
+		new IgnoreEmitPlugin( [
+			'editor.js',
+			'style.js',
+			'editor.asset.php',
+			'style.asset.php',
+		] ),
 	],
 };
